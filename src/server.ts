@@ -1,13 +1,13 @@
-import { fastify } from "fastify"
-import cors from "@fastify/cors"
+import { fastify } from 'fastify'
+import cors from '@fastify/cors'
 
-import { users } from './routes/users'
+import { index } from './routes'
 
 const app = fastify()
 
 app.register(cors)
-app.register(users)
+app.register(index)
 
 app.listen({port: 3333}).then(() => {
-  console.log("🚀 Server Running!")
+  console.log('🚀 Server Running!')
 })
